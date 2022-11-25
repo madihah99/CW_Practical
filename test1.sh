@@ -2,6 +2,7 @@
 
 
 # Tests for dollar values
+echo Input - 1 dollars
 java CurrencyConverter 1 dollars
 
 echo -e
