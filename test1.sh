@@ -96,3 +96,7 @@ echo -e
 echo Input: euros 1
 java CurrencyConverter euros 1
 
+# Test for enter no values
+
+echo Input: " "
+java CurrencyConverter " "
