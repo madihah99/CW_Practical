@@ -15,9 +15,10 @@ public class CurrencyConverter {
 		String currency = curr.toLowerCase();
 
 		// For returning error message to user and exiting when no input entered
-		if(args.length==0){
+
+		if(args.length==0 || args[1].isEmpty()){
                         System.out.println("Please enter a valid VALUE and CURRENCY");
-                        System.exit(0);
+			return;
                 }
 
                 // For amounts Conversion
