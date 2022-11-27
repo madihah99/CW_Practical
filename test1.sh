@@ -65,8 +65,7 @@ echo -e
 input="1 euros"
 expected_output="1.0 Euros = 1.13 Dollars
 1.0 Euros = 0.84 Pounds
-Thank you for using the converter.
-"
+Thank you for using the converter."
 
 echo Input: $input
 
@@ -212,8 +211,8 @@ echo Test 8
 echo -e
 
 input="1 EUROS"
-expected_output="1 Euros = 1.13 Dollars
-1 Euros = 0.84 Pounds
+expected_output="1.0 Euros = 1.13 Dollars
+1.0 Euros = 0.84 Pounds
 Thank you for using the converter."
 
 echo Input: $input
@@ -240,8 +239,8 @@ echo Test 9
 echo -e
 
 input="1 Euros"
-expected_output="1 Euros = 1.13 Dollars
-1 Euros = 0.84 Pounds
+expected_output="1.0 Euros = 1.13 Dollars
+1.0 Euros = 0.84 Pounds
 Thank you for using the converter."
 
 echo Input: $input
