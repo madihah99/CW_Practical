@@ -90,7 +90,7 @@ fi
 echo -e
 
 
-#Tests 4, 5, 6, 7, 8 and 9 - checks
+#Tests 4, 5, 6, 7, 8 and 9 - check that lowercase, uppercase and capetalised currencies are accepted
 echo -e
 echo Test 4
 echo -e
@@ -160,22 +160,9 @@ expected_output="1.0 Pounds = 1.36 Dollars
 Thank you for using the converter."
 
 echo Input: $input
-=======
 
-input="1 dollars"
-ex_ouput="1 Dollars = 0.74 Pounds
-1 Dollars = 0.88 Euros
-Thank you for using the converter."
+echo -e
 
-echo Input: $input
-
-echo Expected Ouput: $ex_output
->>>>>>> 08a0898760a065228754c1f541d402dac69ea49e
-
-actual_output=$(java CurrencyConverter $input)
-echo Actual Output: $actual_output
-
-<<<<<<< HEAD
 echo Expected Output: $expected_output
 
 echo -e
@@ -278,7 +265,7 @@ else
 fi
 
 
-#Test 10, 11 and 12
+#Test 10 - checks that an appropriate message is returned to user if they do not enter a value
 
 echo -e
 echo -e
@@ -307,6 +294,8 @@ else
   echo 'Test Fail'
 fi
 
+
+#Test 11 - checks that an appropriate error message is returned to user if they enter a non-integer value
 echo -e
 echo -e
 echo Test 11
@@ -334,13 +323,15 @@ else
   echo 'Test Fail'
 fi
 
+
+# Test 12 - checks that an appropriate message is returned to the user if the do not enter values in the  expected format
 echo -e
 echo -e
-echo Test 11
+echo Test 12
 echo -e
 
 input="dollars 1"
-expected_output="Please ensure that you enter a value before the currency."
+expected_output="Please ensure that you enter a value THEN the currency (e.g. 5 dollars)."
 
 echo Input: $input
 
@@ -360,8 +351,3 @@ if [ "${expected_output}" == "${actual_output}" ]; then
 else
   echo 'Test Fail'
 fi
-
-
-
-=======
->>>>>>> 08a0898760a065228754c1f541d402dac69ea49e
