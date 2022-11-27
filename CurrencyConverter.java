@@ -11,8 +11,14 @@ public class CurrencyConverter {
 
                 amount = Integer.parseInt(args[0]);
                 String curr = args[1];
-		//Converts currency input lowercase
+		// For converting currency input to lowercase
 		String currency = curr.toLowerCase();
+
+		// For returning error message to user and exiting when no input entered
+		if(args.length==0){
+                        System.out.println("Please enter a valid VALUE and CURRENCY");
+                        System.exit(0);
+                }
 
                 // For amounts Conversion
                 switch (currency){
