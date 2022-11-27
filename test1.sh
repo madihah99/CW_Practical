@@ -137,7 +137,6 @@ echo Expected Output: $expected_output
 
 echo -e
 
-<<<<<<< HEAD
 actual_output=$(java CurrencyConverter $input)
 echo Actual Output: $actual_output
 
