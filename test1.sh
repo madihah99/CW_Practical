@@ -40,7 +40,6 @@ expected_output="1.0 Pounds = 1.36 Dollars
 Thank you for using the converter."
 
 echo Input: $input
-
 echo -e
 
 echo Expected Output: $expected_output
@@ -138,6 +137,7 @@ echo Expected Output: $expected_output
 
 echo -e
 
+<<<<<<< HEAD
 actual_output=$(java CurrencyConverter $input)
 echo Actual Output: $actual_output
 
@@ -160,9 +160,22 @@ expected_output="1.0 Pounds = 1.36 Dollars
 Thank you for using the converter."
 
 echo Input: $input
+=======
 
-echo -e
+input="1 dollars"
+ex_ouput="1 Dollars = 0.74 Pounds
+1 Dollars = 0.88 Euros
+Thank you for using the converter."
 
+echo Input: $input
+
+echo Expected Ouput: $ex_output
+>>>>>>> 08a0898760a065228754c1f541d402dac69ea49e
+
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
+
+<<<<<<< HEAD
 echo Expected Output: $expected_output
 
 echo -e
@@ -350,3 +363,5 @@ fi
 
 
 
+=======
+>>>>>>> 08a0898760a065228754c1f541d402dac69ea49e
