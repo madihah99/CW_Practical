@@ -1,102 +1,352 @@
 #! /bin/bash
 
+#Test 1, 2 and 3 - testing expected outputs
+echo -e
+echo Test 1
+echo -e
 
-# Tests for dollar values
+input="1 dollars"
+expected_output="1.0 Dollars = 0.74 Pounds
+1.0 Dollars = 0.88 Euros
+Thank you for using the converter."
 
-echo Input: 1 dollars
-java CurrencyConverter 1 dollars
+echo Input: $input
 
 echo -e
 
-echo Input: 1 DOLLARS
-java CurrencyConverter 1 DOLLARS
+echo Expected Output: $expected_output
 
 echo -e
 
-echo Input: 1 Dollars
-java CurrencyConverter 1 Dollars
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
 
 echo -e
 
-echo Input: 1 dollar
-java CurrencyConverter 1 dollar
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
+
+echo -e
+echo -e
+echo Test 2
+echo -e
+
+input="1 pounds"
+expected_output="1.0 Pounds = 1.36 Dollars
+1.0 Pounds = 1.19 Euros
+Thank you for using the converter."
+
+echo Input: $input
 
 echo -e
 
-echo Input: 1000 dollars
-java CurrencyConverter 1000 dollars
+echo Expected Output: $expected_output
 
 echo -e
 
-echo Input: dollars 1 
-java CurrencyConverter dollars 1
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
 
 echo -e
 
-# Tests for pound values
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
 
-echo Input: 1 pounds
-java CurrencyConverter 1 pounds
+echo -e
+echo -e
+echo Test 3
+echo -e
+
+input="1 euros"
+expected_output="1.0 Euros = 1.13 Dollars
+1.0 Euros = 0.84 Pounds
+Thank you for using the converter.
+"
+
+echo Input: $input
 
 echo -e
 
-echo Input: 1 POUNDS
-java CurrencyConverter 1 POUNDS
+echo Expected Output: $expected_output
 
 echo -e
 
-echo Input: 1 Pounds
-java CurrencyConverter 1 Pounds
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
 
 echo -e
 
-echo Input: 1 pound
-java CurrencyConverter 1 pound
-
-echo -e
-
-echo Input: 1000 pounds
-java CurrencyConverter 1000 pounds
-
-echo -e
-
-echo Input: pounds 1
-java CurrencyConverter pounds 1
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
 
 echo -e
 
 
-# Tests for euro values
+#Tests 4, 5, 6, 7, 8 and 9 - checks
+echo -e
+echo Test 4
+echo -e
 
-echo Input: 1 euros
-java CurrencyConverter 1 euros
+input="1 DOLLARS"
+expected_output="1.0 Dollars = 0.74 Pounds
+1.0 Dollars = 0.88 Euros
+Thank you for using the converter."
+
+echo Input: $input
 
 echo -e
 
-echo Input: 1 EUROS
-java CurrencyConverter 1 EUROS
+echo Expected Output: $expected_output
 
 echo -e
 
-echo Input: 1 Euros
-java CurrencyConverter 1 Euros
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
 
 echo -e
 
-echo Input: 1 euro
-java CurrencyConverter 1 euro
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
+
+echo -e
+echo -e
+echo Test 5
+echo -e
+
+input="1 Dollars"
+expected_output="1.0 Dollars = 0.74 Pounds
+1.0 Dollars = 0.88 Euros
+Thank you for using the converter."
+
+echo Input: $input
 
 echo -e
 
-echo Input: 1000 euros
-java CurrencyConverter 1000 euros
+echo Expected Output: $expected_output
 
 echo -e
 
-echo Input: euros 1
-java CurrencyConverter euros 1
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
 
-# Test for enter no values
+echo -e
 
-echo Input: " "
-java CurrencyConverter " "
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
+
+echo -e
+echo -e
+echo Test 6
+echo -e
+
+input="1 POUNDS"
+expected_output="1.0 Pounds = 1.36 Dollars
+1.0 Pounds = 1.19 Euros
+Thank you for using the converter."
+
+echo Input: $input
+
+echo -e
+
+echo Expected Output: $expected_output
+
+echo -e
+
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
+
+echo -e
+
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
+
+echo -e
+echo -e
+echo Test 7
+echo -e
+
+input="1 Pounds"
+expected_output="1.0 Pounds = 1.36 Dollars
+1.0 Pounds = 1.19 Euros
+Thank you for using the converter."
+
+echo Input: $input
+
+echo -e
+
+echo Expected Output: $expected_output
+
+echo -e
+
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
+
+echo -e
+
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
+
+echo -e
+echo -e
+echo Test 8
+echo -e
+
+input="1 EUROS"
+expected_output="1 Euros = 1.13 Dollars
+1 Euros = 0.84 Pounds
+Thank you for using the converter."
+
+echo Input: $input
+
+echo -e
+
+echo Expected Output: $expected_output
+
+echo -e
+
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
+
+echo -e
+
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
+echo -e
+echo -e
+echo Test 9
+echo -e
+
+input="1 Euros"
+expected_output="1 Euros = 1.13 Dollars
+1 Euros = 0.84 Pounds
+Thank you for using the converter."
+
+echo Input: $input
+
+echo -e
+
+echo Expected Output: $expected_output
+
+echo -e
+
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
+
+echo -e
+
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
+
+
+#Test 10, 11 and 12
+
+echo -e
+echo -e
+echo Test 10
+echo -e
+
+input=" "
+expected_output="Please enter a valid VALUE and CURRENCY."
+
+echo Input: $input
+
+echo -e
+
+echo Expected Output: $expected_output
+
+echo -e
+
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
+
+echo -e
+
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
+
+echo -e
+echo -e
+echo Test 11
+echo -e
+
+input="Ten dollars"
+expected_output="Please enter an integer value (e.g. 5 dollars)"
+
+echo Input: $input
+
+echo -e
+
+echo Expected Output: $expected_output
+
+echo -e
+
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
+
+echo -e
+
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
+
+echo -e
+echo -e
+echo Test 11
+echo -e
+
+input="dollars 1"
+expected_output="Please ensure that you enter a value before the currency."
+
+echo Input: $input
+
+echo -e
+
+echo Expected Output: $expected_output
+
+echo -e
+
+actual_output=$(java CurrencyConverter $input)
+echo Actual Output: $actual_output
+
+echo -e
+
+if [ "${expected_output}" == "${actual_output}" ]; then
+  echo 'Test Pass'
+else
+  echo 'Test Fail'
+fi
+
+
+
