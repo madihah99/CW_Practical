@@ -14,12 +14,6 @@ public class CurrencyConverter {
 		// For converting currency input to lowercase
 		String currency = curr.toLowerCase();
 
-		// For returning error message to user and exiting when no input entered
-
-		// For returning message to user when the input is entered in the wrong order
-
-		// For returning a message when a non-integer value is entered
-
                 // For amounts Conversion
                 switch (currency){
                         case "dollars" :
