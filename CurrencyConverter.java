@@ -20,6 +20,10 @@ public class CurrencyConverter {
 			System.exit(0);
 		}
 
+		// For returning message to user when the input is entered in the wrong order
+
+		// For returning a message when a non-integer value is entered
+
                 // For amounts Conversion
                 switch (currency){
                         case "dollars" :
