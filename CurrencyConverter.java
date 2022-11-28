@@ -15,10 +15,6 @@ public class CurrencyConverter {
 		String currency = curr.toLowerCase();
 
 		// For returning error message to user and exiting when no input entered
-		if(args.length == 0) {
-			System.out.println("Please enter a valid VALUE and CURRENCY.");
-			System.exit(0);
-		}
 
 		// For returning message to user when the input is entered in the wrong order
 
